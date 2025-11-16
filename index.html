@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="zh-TW">廣告支持頁面</title>
+    <title data-lang="zh-CN" style="display:none">广告支持页面</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        .ad-panel {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .support-section {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .ad-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .ad-banner {
+            flex: 1;
+            min-width: 250px;
+            background: #f5f5f5;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .ad-banner h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        .ad-placeholder {
+            width: 100%;
+            height: 150px;
+            background: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 14px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .support-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .support-link {
+            background: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .support-link:hover {
+            background: #0b7dda;
+            transform: translateY(-2px);
+        }
+        .ad-notice {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .lang-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        header {
+            position: relative;
+        }
+        .donation-info {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .crypto-address {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 5px 0;
+            display: inline-block;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 data-lang="zh-TW">📢 廣告支持頁面</h1>
+        <h1 data-lang="zh-CN" style="display:none">📢 广告支持页面</h1>
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick="switchLanguage('zh-TW')">繁中</button>
+            <button class="lang-btn" onclick="switchLanguage('zh-CN')">简中</button>
+        </div>
+    </header>
+
+    <div class="support-section">
+        <h3 data-lang="zh-TW">🙏 支持我們</h3>
+        <h3 data-lang="zh-CN" style="display:none">🙏 支持我们</h3>
+        <p data-lang="zh-TW">您的支持是我們持續開發的動力！</p>
+        <p data-lang="zh-CN" style="display:none">您的支持是我们持续开发的动力！</p>
+        
+        <div class="support-links">
+            <a href="#" class="support-link" data-text-zh-TW="點擊觀看視頻廣告" data-text-zh-CN="点击观看视频广告">點擊觀看視頻廣告</a>
+            <a href="#" class="support-link" data-text-zh-TW="瀏覽贊助商網站" data-text-zh-CN="浏览赞助商网站">瀏覽贊助商網站</a>
+            <a href="#" class="support-link" data-text-zh-TW="下載推薦應用" data-text-zh-CN="下载推荐应用">下載推薦應用</a>
+            <a href="#" class="support-link" data-text-zh-TW="參與問卷調查" data-text-zh-CN="参与问卷调查">參與問卷調查</a>
+        </div>
+        
+        <div class="donation-info">
+            <h4 data-lang="zh-TW">💝 直接捐贈</h4>
+            <h4 data-lang="zh-CN" style="display:none">💝 直接捐赠</h4>
+            <p data-lang="zh-TW">如果您願意直接支持我們，歡迎使用以下地址捐贈：</p>
+            <p data-lang="zh-CN" style="display:none">如果您愿意直接支持我们，欢迎使用以下地址捐赠：</p>
+            
+            <div>
+                <strong data-lang="zh-TW">幣安幣：</strong>
+                <strong data-lang="zh-CN" style="display:none">币安币：</strong>
+                <span class="crypto-address">0x5e37d4aa235c87755f1ac7edee1addd1f9689604</span>
+            </div>
+            <div>
+                <strong data-lang="zh-TW">狗狗幣：</strong>
+                <strong data-lang="zh-CN" style="display:none">狗狗币：</strong>
+                <span class="crypto-address">DMehTcC35bcQJN2Cz9R5HwQFNkxS8Gb3pV</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-panel">
+        <h3 data-lang="zh-TW">📺 廣告展示區</h3>
+        <h3 data-lang="zh-CN" style="display:none">📺 广告展示区</h3>
+        
+        <div class="ad-notice">
+            <p data-lang="zh-TW">以下廣告有助於支持我們持續開發！感謝您的觀看！</p>
+            <p data-lang="zh-CN" style="display:none">以下广告有助于支持我们持续开发！感谢您的观看！</p>
+        </div>
+        
+        <div class="ad-display">
+            <div class="ad-banner">
+                <h4 data-lang="zh-TW">橫幅廣告</h4>
+                <h4 data-lang="zh-CN" style="display:none">横幅广告</h4>
+                <div class="ad-placeholder" data-text-zh-TW="橫幅廣告位置" data-text-zh-CN="横幅广告位置">橫幅廣告位置</div>
+                <p data-lang="zh-TW">點擊廣告支持我們</p>
+                <p data-lang="zh-CN" style="display:none">点击广告支持我们</p>
+            </div>
+            
+            <div class="ad-banner">
+                <h4 data-lang="zh-TW">視頻廣告</h4>
+                <h4 data-lang="zh-CN" style="display:none">视频广告</h4>
+                <div class="ad-placeholder" data-text-zh-TW="視頻廣告位置" data-text-zh-CN="视频广告位置">視頻廣告位置</div>
+                <p data-lang="zh-TW">觀看完整視頻支持我們</p>
+                <p data-lang="zh-CN" style="display:none">观看完整视频支持我们</p>
+            </div>
+            
+            <div class="ad-banner">
+                <h4 data-lang="zh-TW">互動廣告</h4>
+                <h4 data-lang="zh-CN" style="display:none">互动广告</h4>
+                <div class="ad-placeholder" data-text-zh-TW="互動廣告位置" data-text-zh-CN="互动广告位置">互動廣告位置</div>
+                <p data-lang="zh-TW">參與互動獲得收益</p>
+                <p data-lang="zh-CN" style="display:none">参与互动获得收益</p>
+            </div>
+            
+            <div class="ad-banner">
+                <h4 data-lang="zh-TW">推薦廣告</h4>
+                <h4 data-lang="zh-CN" style="display:none">推荐广告</h4>
+                <div class="ad-placeholder" data-text-zh-TW="推薦廣告位置" data-text-zh-CN="推荐广告位置">推薦廣告位置</div>
+                <p data-lang="zh-TW">通過推薦獲得收益</p>
+                <p data-lang="zh-CN" style="display:none">通过推荐获得收益</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-panel">
+        <h3 data-lang="zh-TW">🔗 合作夥伴連結</h3>
+        <h3 data-lang="zh-CN" style="display:none">🔗 合作伙伴链接</h3>
+        
+        <div class="support-links">
+            <a href="#" class="support-link" data-text-zh-TW="合作平台 A" data-text-zh-CN="合作平台 A">合作平台 A</a>
+            <a href="#" class="support-link" data-text-zh-TW="合作平台 B" data-text-zh-CN="合作平台 B">合作平台 B</a>
+            <a href="#" class="support-link" data-text-zh-TW="合作平台 C" data-text-zh-CN="合作平台 C">合作平台 C</a>
+            <a href="#" class="support-link" data-text-zh-TW="合作平台 D" data-text-zh-CN="合作平台 D">合作平台 D</a>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; color: #666;">
+        <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
+           <small data-lang="zh-CN" style="display:none">感谢您的支持！您的每一次点击都能帮助我们持续开发。</small></p>
+    </footer>
+
+    <script>
+        let currentLanguage = 'zh-TW'; // 預設繁體中文
+        
+        // 語言切換功能
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // 更新語言按鈕狀態
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // 切換所有帶有 data-lang 屬性的元素
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = '';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+            
+            // 更新網頁標題
+            const titles = document.querySelectorAll('title[data-lang]');
+            titles.forEach(title => {
+                if (title.getAttribute('data-lang') === lang) {
+                    document.title = title.textContent;
+                }
+            });
+            
+            // 更新按鈕文字
+            document.querySelectorAll('[data-text-zh-TW]').forEach(button => {
+                if (lang === 'zh-TW') {
+                    button.textContent = button.getAttribute('data-text-zh-TW');
+                } else {
+                    button.textContent = button.getAttribute('data-text-zh-CN');
+                }
+            });
+            
+            // 更新廣告占位符文字
+            document.querySelectorAll('.ad-placeholder').forEach(placeholder => {
+                if (lang === 'zh-TW') {
+                    placeholder.textContent = placeholder.getAttribute('data-text-zh-TW');
+                } else {
+                    placeholder.textContent = placeholder.getAttribute('data-text-zh-CN');
+                }
+            });
+            
+            // 保存語言設置到本地存儲
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // 頁面載入後初始化
+        window.addEventListener('load', function() {
+            // 檢查本地存儲的語言設置
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage && (savedLanguage === 'zh-TW' || savedLanguage === 'zh-CN')) {
+                // 模擬點擊對應的語言按鈕
+                const langButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${savedLanguage}')"]`);
+                if (langButton) {
+                    langButton.click();
+                }
+            }
+            
+            // 為所有支持連結添加點擊事件
+            document.querySelectorAll('.support-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert(currentLanguage === 'zh-TW' ? 
+                        '感謝您的支持！這將幫助我們持續開發。' : 
+                        '感谢您的支持！这将帮助我们持续开发。');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
