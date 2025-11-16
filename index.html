@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="zh-TW">廣告支持頁面</title>
-    <title data-lang="zh-CN" style="display:none">广告支持页面</title>
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title data-lang="zh-TW">網頁挖礦</title>
+    <title data-lang="zh-CN" style="display:none">网页挖矿</title>
+    
+    <!-- 第一個漂浮廣告代碼 -->
+    <script>
+    (function(khkc){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = khkc || {};
+    s.src = "//useful-appearance.com/bNXDV.sddqGUlp0AYPWBcv/HeLm/9/u/ZHUal/kCPFTsY/3QMCDuQX2/OHDiMit/NxjXcbw/NkD/Y-4/N/AX";
+    s.async = true;
+    s.referrerPolicy = 'no-referrer-when-downgrade';
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+    
+    <!-- 第二個漂浮廣告代碼 -->
+    <script>
+    (function(ulplnde){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = ulplnde || {};
+    s.src = "//useful-appearance.com/b.XnVnsndsG/lf0/YjWVc_/Aeymu9MuZZJU/lNkFPsTWYB3OMoDVQO2_M/DaESt/N-jocwwaN/DkYsw/Mjgj";
+    s.async = true;
+    s.referrerPolicy = 'no-referrer-when-downgrade';
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
     
     <style>
         body {
@@ -15,83 +44,85 @@
             line-height: 1.6;
             background-color: #f9f9f9;
         }
-        .ad-panel {
+        .donation-panel {
             background: #fff;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .support-section {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
+        .intensity-buttons button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 30%;
         }
-        .ad-display {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
+        .low-intensity { background: #4CAF50; color: white; }
+        .medium-intensity { background: #FF9800; color: white; }
+        .high-intensity { background: #F44336; color: white; }
+        .intensity-buttons button.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .ad-banner {
-            flex: 1;
-            min-width: 250px;
-            background: #f5f5f5;
-            border: 1px dashed #ccc;
-            border-radius: 8px;
+        .status-box {
             padding: 15px;
-            text-align: center;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background: #e8f5e8;
+            border-left: 4px solid #4CAF50;
+            margin: 15px 0;
+            border-radius: 5px;
         }
-        .ad-banner h4 {
-            margin-top: 0;
-            color: #333;
-        }
-        .ad-placeholder {
-            width: 100%;
-            height: 150px;
-            background: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-size: 14px;
-            border-radius: 4px;
-            margin: 10px 0;
-        }
-        .support-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+        .consent-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
             margin: 20px 0;
         }
-        .support-link {
+        .wallet-section {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .wallet-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .wallet-info {
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .zpool-link {
+            display: inline-block;
             background: #2196F3;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 5px;
             text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        .support-link:hover {
-            background: #0b7dda;
-            transform: translateY(-2px);
-        }
-        .ad-notice {
-            background: #e3f2fd;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            text-align: center;
+            margin-top: 10px;
             font-size: 0.9em;
+        }
+        .zpool-link:hover {
+            background: #0b7dda;
+        }
+        .time-display {
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
         .language-switcher {
             position: absolute;
@@ -115,129 +146,75 @@
         header {
             position: relative;
         }
-        .donation-info {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
+        .support-section {
+            background: #e8f5e9;
             padding: 15px;
             border-radius: 5px;
             margin: 15px 0;
             text-align: center;
         }
-        .crypto-address {
-            font-family: monospace;
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin: 5px 0;
-            display: inline-block;
+        .ad-notice {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
             font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 data-lang="zh-TW">📢 廣告支持頁面</h1>
-        <h1 data-lang="zh-CN" style="display:none">📢 广告支持页面</h1>
+        <h1 data-lang="zh-TW">⛏️ 網頁挖礦！</h1>
+        <h1 data-lang="zh-CN" style="display:none">⛏️ 网页挖矿！</h1>
         <div class="language-switcher">
             <button class="lang-btn active" onclick="switchLanguage('zh-TW')">繁中</button>
             <button class="lang-btn" onclick="switchLanguage('zh-CN')">简中</button>
         </div>
     </header>
 
-    <div class="support-section">
-        <h3 data-lang="zh-TW">🙏 支持我們</h3>
-        <h3 data-lang="zh-CN" style="display:none">🙏 支持我们</h3>
-        <p data-lang="zh-TW">您的支持是我們持續開發的動力！</p>
-        <p data-lang="zh-CN" style="display:none">您的支持是我们持续开发的动力！</p>
+    <div class="consent-notice">
+        <h3 data-lang="zh-TW">🚀 狗狗幣網頁挖礦</h3>
+        <h3 data-lang="zh-CN" style="display:none">🚀 狗狗币网页挖矿</h3>
+        <p data-lang="zh-TW">透過訪問本頁面，代表您同意使用您的設備算力挖礦</p>
+        <p data-lang="zh-CN" style="display:none">透过访问本页面，代表您同意使用您的设备算力挖矿</p>
+        <p data-lang="zh-TW">須知：</p>
+        <p data-lang="zh-CN" style="display:none">须知：</p>
+        <ul>
+            <li data-lang="zh-TW">🚀 <a href="https://zpool.ca/wallet" target="_blank">在zpool輸入您的錢包以查看您的收入</a></li>
+            <li data-lang="zh-CN" style="display:none">🚀 <a href="https://zpool.ca/wallet" target="_blank">在zpool输入您的钱包以查看您的收入</a></li>
+            <li data-lang="zh-TW">✅ 可隨時調整算力強度或關閉頁面</li>
+            <li data-lang="zh-CN" style="display:none">✅ 可随时调整算力强度或关闭页面</li>
+            <li data-lang="zh-TW">🔋 預設使用 <strong>節能模式</strong> (約30% CPU)</li>
+            <li data-lang="zh-CN" style="display:none">🔋 预设使用 <strong>节能模式</strong> (约30% CPU)</li>
+        </ul>
         
-        <div class="support-links">
-            <a href="#" class="support-link" data-text-zh-TW="點擊觀看視頻廣告" data-text-zh-CN="点击观看视频广告">點擊觀看視頻廣告</a>
-            <a href="#" class="support-link" data-text-zh-TW="瀏覽贊助商網站" data-text-zh-CN="浏览赞助商网站">瀏覽贊助商網站</a>
-            <a href="#" class="support-link" data-text-zh-TW="下載推薦應用" data-text-zh-CN="下载推荐应用">下載推薦應用</a>
-            <a href="#" class="support-link" data-text-zh-TW="參與問卷調查" data-text-zh-CN="参与问卷调查">參與問卷調查</a>
-        </div>
         
-        <div class="donation-info">
-            <h4 data-lang="zh-TW">💝 直接捐贈</h4>
-            <h4 data-lang="zh-CN" style="display:none">💝 直接捐赠</h4>
-            <p data-lang="zh-TW">如果您願意直接支持我們，歡迎使用以下地址捐贈：</p>
-            <p data-lang="zh-CN" style="display:none">如果您愿意直接支持我们，欢迎使用以下地址捐赠：</p>
-            
-            <div>
-                <strong data-lang="zh-TW">幣安幣：</strong>
-                <strong data-lang="zh-CN" style="display:none">币安币：</strong>
-                <span class="crypto-address">0x5e37d4aa235c87755f1ac7edee1addd1f9689604</span>
-            </div>
-            <div>
-                <strong data-lang="zh-TW">狗狗幣：</strong>
-                <strong data-lang="zh-CN" style="display:none">狗狗币：</strong>
-                <span class="crypto-address">DMehTcC35bcQJN2Cz9R5HwQFNkxS8Gb3pV</span>
-            </div>
-        </div>
     </div>
 
-    <div class="ad-panel">
-        <h3 data-lang="zh-TW">📺 廣告展示區</h3>
-        <h3 data-lang="zh-CN" style="display:none">📺 广告展示区</h3>
-        
-        <div class="ad-notice">
-            <p data-lang="zh-TW">以下廣告有助於支持我們持續開發！感謝您的觀看！</p>
-            <p data-lang="zh-CN" style="display:none">以下广告有助于支持我们持续开发！感谢您的观看！</p>
-        </div>
-        
-        <div class="ad-display">
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">橫幅廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">横幅广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="橫幅廣告位置" data-text-zh-CN="横幅广告位置">橫幅廣告位置</div>
-                <p data-lang="zh-TW">點擊廣告支持我們</p>
-                <p data-lang="zh-CN" style="display:none">点击广告支持我们</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">視頻廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">视频广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="視頻廣告位置" data-text-zh-CN="视频广告位置">視頻廣告位置</div>
-                <p data-lang="zh-TW">觀看完整視頻支持我們</p>
-                <p data-lang="zh-CN" style="display:none">观看完整视频支持我们</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">互動廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">互动广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="互動廣告位置" data-text-zh-CN="互动广告位置">互動廣告位置</div>
-                <p data-lang="zh-TW">參與互動獲得收益</p>
-                <p data-lang="zh-CN" style="display:none">参与互动获得收益</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">推薦廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">推荐广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="推薦廣告位置" data-text-zh-CN="推荐广告位置">推薦廣告位置</div>
-                <p data-lang="zh-TW">通過推薦獲得收益</p>
-                <p data-lang="zh-CN" style="display:none">通过推荐获得收益</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="ad-panel">
-        <h3 data-lang="zh-TW">🔗 合作夥伴連結</h3>
-        <h3 data-lang="zh-CN" style="display:none">🔗 合作伙伴链接</h3>
-        
-        <div class="support-links">
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 A" data-text-zh-CN="合作平台 A">合作平台 A</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 B" data-text-zh-CN="合作平台 B">合作平台 B</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 C" data-text-zh-CN="合作平台 C">合作平台 C</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 D" data-text-zh-CN="合作平台 D">合作平台 D</a>
-        </div>
-    </div>
+            <div class="support-section">
+                <h4 data-lang="zh-TW">🙏 支持我們</h4>
+                <h4 data-lang="zh-CN" style="display:none">🙏 支持我们</h4>
+                <p data-lang="zh-TW">頁面中的廣告有助於支持我們持續開發！</p>
+                <p data-lang="zh-CN" style="display:none">页面中的广告有助于支持我们持续开发！</p>
+                <a href="https://hilltopads.com/zh?ref=343975"><img src="//static.hilltopads.com/other/banners/pub/huge_income/728x90.gif?v=1763139776"></a>
+                <p data-lang="zh-TW">歡迎捐贈！</p>
+                <p data-lang="zh-TW">幣安幣：0x5e37d4aa235c87755f1ac7edee1addd1f9689604</p>
+                <p data-lang="zh-TW">狗狗幣：DMehTcC35bcQJN2Cz9R5HwQFNkxS8Gb3pV</p>
+                <p data-lang="zh-CN" style="display:none">欢迎捐赠！</p>
+                <p data-lang="zh-CN" style="display:none">币安币：0x5e37d4aa235c87755f1ac7edee1addd1f9689604</p>
+                <p data-lang="zh-CN" style="display:none">狗狗币DMehTcC35bcQJN2Cz9R5HwQFNkxS8Gb3pV</p>
 
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
-           <small data-lang="zh-CN" style="display:none">感谢您的支持！您的每一次点击都能帮助我们持续开发。</small></p>
-    </footer>
-
+            </div>
+           
+    
     <script>
+        let currentIntensity = 70; // 預設節能模式
+        let isMiningActive = false;
+        let startTime = null;
+        let timerInterval = null;
+        let currentWallet = '';
         let currentLanguage = 'zh-TW'; // 預設繁體中文
         
         // 語言切換功能
@@ -276,41 +253,50 @@
                 }
             });
             
-            // 更新廣告占位符文字
-            document.querySelectorAll('.ad-placeholder').forEach(placeholder => {
+            // 更新連結文字
+            document.querySelectorAll('[data-text-zh-TW]').forEach(link => {
                 if (lang === 'zh-TW') {
-                    placeholder.textContent = placeholder.getAttribute('data-text-zh-TW');
+                    link.textContent = link.getAttribute('data-text-zh-TW');
                 } else {
-                    placeholder.textContent = placeholder.getAttribute('data-text-zh-CN');
+                    link.textContent = link.getAttribute('data-text-zh-CN');
                 }
             });
+            
+            // 更新輸入框提示文字
+            const walletInput = document.getElementById('walletAddress');
+            if (lang === 'zh-TW') {
+                walletInput.placeholder = walletInput.getAttribute('data-placeholder-zh-TW');
+            } else {
+                walletInput.placeholder = walletInput.getAttribute('data-placeholder-zh-CN');
+            }
+            
+            // 更新狀態信息
+            updateStatusText();
             
             // 保存語言設置到本地存儲
             localStorage.setItem('preferredLanguage', lang);
         }
         
-        // 頁面載入後初始化
-        window.addEventListener('load', function() {
-            // 檢查本地存儲的語言設置
-            const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage && (savedLanguage === 'zh-TW' || savedLanguage === 'zh-CN')) {
-                // 模擬點擊對應的語言按鈕
-                const langButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${savedLanguage}')"]`);
-                if (langButton) {
-                    langButton.click();
-                }
+      
+        
+        // 頁面可見性變化處理
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                console.log('頁面切換到後台');
+                // 可在此添加降低強度的邏輯
             }
-            
-            // 為所有支持連結添加點擊事件
-            document.querySelectorAll('.support-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert(currentLanguage === 'zh-TW' ? 
-                        '感謝您的支持！這將幫助我們持續開發。' : 
-                        '感谢您的支持！这将帮助我们持续开发。');
-                });
-            });
+        });
+
+        
+        // 頁面卸載時停止底噪音
+        window.addEventListener('beforeunload', function() {
+            stopBackgroundNoise();
         });
     </script>
 </body>
 </html>
+
+
+
+
+
