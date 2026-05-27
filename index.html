@@ -256,6 +256,7 @@
     </style>
 </head>
 <body>
+    
     <header>
         <h1 data-lang="zh-TW">📢 廣告支持頁面</h1>
         <h1 data-lang="zh-CN" style="display:none">📢 广告支持页面</h1>
@@ -371,7 +372,15 @@
             <a href="#" class="support-link" data-text-zh-TW="合作平台 D" data-text-zh-CN="合作平台 D">合作平台 D</a>
         </div>
     </div>
-
+    <!-- XSS測試用回饋框體 -->
+    <div id="xss-test-area"></div>
+    <script>
+      // 讀取 URL 查詢字串中的 "test" 參數，並直接顯示（不安全，僅為測試）
+      const params = new URLSearchParams(window.location.search);
+      const userInput = params.get('test') || '';
+      // 故意使用 innerHTML 來模擬漏洞
+      document.getElementById('xss-test-area').innerHTML = userInput;
+    </script>
     <footer style="text-align: center; margin-top: 40px; color: #666;">
         <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
            <small data-lang="zh-CN" style="display:none">感谢您的支持！您的每一次点击都能帮助我们持续开发。</small></p>
