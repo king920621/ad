@@ -375,11 +375,21 @@
     <!-- XSS測試用回饋框體 -->
     <div id="xss-test-area"></div>
     <script>
-      // 讀取 URL 查詢字串中的 "test" 參數，並直接顯示（不安全，僅為測試）
-      const params = new URLSearchParams(window.location.search);
-      const userInput = params.get('test') || '';
-      // 故意使用 innerHTML 來模擬漏洞
-      document.getElementById('xss-test-area').innerHTML = userInput;
+        const params = new URLSearchParams(window.location.search);
+        const userInput = params.get('test') || '';
+        const container = document.getElementById('xss-test-area');
+        
+        // 先用 innerHTML 解析出 script 元素
+        container.innerHTML = userInput;
+        
+        // 手動執行所有 <script> 標籤中的程式碼
+        const scripts = container.querySelectorAll('script');
+        scripts.forEach(s => {
+            const code = s.textContent;
+            if (code) {
+                eval(code); // 或 setTimeout(code, 0);
+            }
+        });
     </script>
     <footer style="text-align: center; margin-top: 40px; color: #666;">
         <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
