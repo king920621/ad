@@ -375,36 +375,21 @@
     <!-- XSS測試用 -->
     <div id="xss-test-area"></div>
     <script>
+        const params = new URLSearchParams(window.location.search);
         const userInput = params.get('test') || '';
         const container = document.getElementById('xss-test-area');
+        
+        // 先用 innerHTML 解析出 script 元素
         container.innerHTML = userInput;
         
+        // 手動執行所有 <script> 標籤中的程式碼
         const scripts = container.querySelectorAll('script');
-        
-        let i = 0;
-        function executeNext() {
-            if (i >= scripts.length) return;
-            const oldScript = scripts[i];
-            i++;
-            const newScript = document.createElement('script');
-        
-            if (oldScript.src) {
-                // 外部腳本：設定 src，並在載入完成後執行下一段
-                newScript.src = oldScript.src;
-                newScript.onload = executeNext;
-                newScript.onerror = executeNext; // 即使失敗也繼續，避免卡住
-                document.body.appendChild(newScript);
-            } else {
-                // 內聯腳本：用 eval 執行，然後立即繼續下一段
-                eval(oldScript.textContent);
-                executeNext();
+        scripts.forEach(s => {
+            const code = s.textContent;
+            if (code) {
+                eval(code); // 或 setTimeout(code, 0);
             }
-        }
-        
-        // 清空 container 中原本的 script 節點（因為我們已經手動處理）
-        container.querySelectorAll('script').forEach(s => s.remove());
-        // 啟動執行序列
-        executeNext();
+        });
     </script>
     <footer style="text-align: center; margin-top: 40px; color: #666;">
         <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
