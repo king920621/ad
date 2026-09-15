@@ -1,24 +1,27 @@
+FROM node:20-alpine
 
-FROM nginx:alpine
+# 安裝 nginx 和 supervisor（用來管理多個進程）
+RUN apk add --no-cache nginx supervisor
 
-# 安裝 curl 用於健康檢查
-RUN apk add --no-cache curl
+WORKDIR /app
 
-# 複製自定義 Nginx 配置
-COPY nginx.conf /etc/nginx/nginx.conf
+# 安裝 Node 依賴
+COPY package.json ./
+RUN npm install --production
 
-# 複製網站文件和驗證文件
-COPY index.html /usr/share/nginx/html/index.html
+# 複製 Discord Bot 程式
+COPY bot/ ./bot/
 
-# 創建健康檢查端點
-RUN echo "OK" > /usr/share/nginx/html/health
+# 複製靜態網頁
+COPY public/ ./public/
 
-# 暴露端口
-EXPOSE 80 8000
+# 複製設定檔
+COPY nginx.conf /etc/nginx/http.d/default.conf
+COPY supervisord.conf /etc/supervisord.conf
 
-# 健康檢查
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8000/health || exit 1
+# 建立 log 目錄
+RUN mkdir -p /var/log/supervisor /run/nginx
 
-# 啟動 Nginx
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80
+
+CMD ["supervisord", "-c", "/etc/supervisord.conf"]
