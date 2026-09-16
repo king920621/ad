@@ -181,6 +181,18 @@
     border-top: 1px solid #eee;
   }
 </style>
+<script>
+  (function() {
+    const lang = navigator.language || 'zh-TW';
+    const titles = {
+      'zh-TW': 'WS PR卡價格表 | 當期比賽包・Climax賽PR卡價格查詢',
+      'zh-CN': 'WS PR卡价格表 | 当期比赛包・Climax赛PR卡价格查询',
+      'ja':    'WS PRカード価格表 | 大会プロモ・クライマックスPRカード価格一覧'
+    };
+    const short = lang.split('-')[0];
+    document.title = titles[lang] || titles[short] || titles['zh-TW'];
+  })();
+</script>
 </head>
 <body>
 
@@ -337,4 +349,5 @@ l.parentNode.insertBefore(s, l);
 })({})
 </script>
 </body>
+  
 </html>
