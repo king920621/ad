@@ -65,7 +65,7 @@ async function syncDataFromGitHub() {
 // ==========================================
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
-client.once('ready', () => {
+client.once('ready', async () => {
   console.log(`🤖 Bot 已上線：${client.user.tag}`);
   console.log(`📡 服務中 ${client.guilds.cache.size} 個伺服器`);
     // 上線後立刻同步資料
