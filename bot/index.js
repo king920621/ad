@@ -3,6 +3,9 @@ import 'dotenv/config';
 import { Client, GatewayIntentBits, REST, Routes } from 'discord.js';
 import { commands } from './commands.js';
 import { handleCommand, handleAutocomplete } from './handlers.js';
+import { readData, writeData } from './dataManager.js'; // ← 新增 writeData
+import fs from 'fs/promises';
+import path from 'path';
 
 // ==========================================
 // 環境變數檢查
@@ -42,7 +45,21 @@ try {
   console.error('❌ 註冊指令失敗:', e);
   process.exit(1);
 }
-
+// ==========================================
+// 啟動時同步 GitHub → 本地檔案
+// ==========================================
+async function syncDataFromGitHub() {
+  try {
+    console.log('🔄 正在從 GitHub 同步最新資料...');
+    const data = await readData();
+    
+    const localPath = path.join('/app', 'public', 'data.json');
+    await fs.writeFile(localPath, JSON.stringify(data, null, 2), 'utf-8');
+    console.log('✅ 已同步最新資料到本地 public/data.json');
+  } catch (e) {
+    console.error('⚠️ 啟動同步失敗，將使用本地現有檔案:', e.message);
+  }
+}
 // ==========================================
 // 啟動 Bot
 // ==========================================
@@ -51,6 +68,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.once('ready', () => {
   console.log(`🤖 Bot 已上線：${client.user.tag}`);
   console.log(`📡 服務中 ${client.guilds.cache.size} 個伺服器`);
+    // 上線後立刻同步資料
+  await syncDataFromGitHub();
 });
 
 // Autocomplete 事件
