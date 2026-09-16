@@ -1,559 +1,168 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google IMA SDK <meta name="d1c2c839a387e76a01ca4f1ebf80c648e6ccbf56" content="d1c2c839a387e76a01ca4f1ebf80c648e6ccbf56" />-->
-    <title data-lang="zh-TW">廣告支持頁面</title>
-    <title data-lang="zh-CN" style="display:none">广告支持页面</title>
-    
-    <!-- Google IMA SDK -->
-    <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-    
-    <!-- 現有廣告代碼 -->
-    <!--<script>
-        (function(vpccfs){
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = vpccfs || {};
-        s.src = "\/\/dutifulmake.com\/bAX.Vps\/dlGklU0JYFWQcj\/be_m\/9EuCZAUmlDksP\/TvY-3lMPDpQu2XOtDxMTtaNTjMchwdNQDsYF4aNuAz";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-        })({})
-    </script>-->
-    <!--<script>
-        (function(dyybuw){
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = dyybuw || {};
-        s.src = "\/\/aggressivestruggle.com\/bDXjVTsRd.Grlj0xYFWocm\/EeEmC9\/uvZAULlZkoPITYYw3QMrDAYKzKMmziUut\/N_jAciwVNsjmM\/z\/NOgN";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-        })({})
-    </script>
-    
-    <script>
-        (function(akon){
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = akon || {};
-        s.src = "\/\/aggressivestruggle.com\/b\/X.VysgddGwlX0CYAW-cz\/jelmn9cuSZjUAlKkcPOTfYO3eMvDbYdzBNDDiIBt\/NDj\/cawrNGjtMh0QM_wp";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-        })({})
-    </script>-->
-    <!-- 彈窗廣告代碼 -->
-    <!--<script>
-    (function(ykc){
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = ykc || {};
-        s.src = "\/\/irresponsiblefly.com\/cmD\/9.6Vbz2o5UloSdWDQc9YNjj_c\/w\/NZjiMp3nMpi\/0\/2pNUzGAu2IMqzwc\/ze";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-        })({})
-    </script>-->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-        .ad-panel {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .support-section {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .ad-display {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .ad-banner {
-            flex: 1;
-            min-width: 250px;
-            background: #f5f5f5;
-            border: 1px dashed #ccc;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .ad-banner h4 {
-            margin-top: 0;
-            color: #333;
-        }
-        .ad-placeholder {
-            width: 100%;
-            height: 150px;
-            background: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-size: 14px;
-            border-radius: 4px;
-            margin: 10px 0;
-        }
-        .support-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .support-link {
-            background: #2196F3;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .support-link:hover {
-            background: #0b7dda;
-            transform: translateY(-2px);
-        }
-        .ad-notice {
-            background: #e3f2fd;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .language-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .lang-btn {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9em;
-            margin-left: 5px;
-        }
-        .lang-btn.active {
-            background: #007bff;
-            color: white;
-            border-color: #007bff;
-        }
-        header {
-            position: relative;
-        }
-        .donation-info {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-            text-align: center;
-        }
-        .crypto-address {
-            font-family: monospace;
-            background: #f8f9fa;
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin: 5px 0;
-            display: inline-block;
-            font-size: 0.9em;
-        }
-        
-        /* 視頻廣告容器樣式 */
-        .video-ad-container {
-            width: 100%;
-            max-width: 640px;
-            margin: 20px auto;
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            display: none;
-        }
-        .video-ad-player {
-            width: 100%;
-            height: 360px;
-            background: #000;
-        }
-        .skip-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            border: 1px solid #fff;
-            padding: 5px 10px;
-            cursor: pointer;
-            z-index: 1000;
-            border-radius: 3px;
-            font-size: 12px;
-        }
-        .ad-info {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 5px 10px;
-            font-size: 12px;
-            border-radius: 3px;
-        }
-        .close-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            border: 1px solid #fff;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            font-size: 16px;
-        }
-        .ad-reward {
-            background: #4CAF50;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WS 卡片價格表</title>
+<style>
+  body {
+    font-family: -apple-system, "Microsoft JhengHei", "Noto Sans CJK TC", sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+  }
+  
+  /* 每個區塊的容器 */
+  .section {
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 60px; /* 區塊之間的間距 */
+  }
+
+  /* 標題樣式 */
+  .section-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+  }
+
+  th {
+    background-color: #a4b3ea;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 18px 10px;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+  }
+
+  td {
+    background-color: #e2e7fb;
+    padding: 18px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+  }
+
+  th:nth-child(1), td:nth-child(1) { width: 20%; }
+  th:nth-child(2), td:nth-child(2) { width: 20%; }
+  th:nth-child(3), td:nth-child(3) { width: 40%; }
+  th:nth-child(4), td:nth-child(4) { width: 15%; }
+  th:nth-child(5), td:nth-child(5) { width: 5%; }
+
+  #error-msg {
+    color: #c0392b;
+    font-size: 16px;
+    margin-top: 20px;
+    display: none;
+  }
+</style>
 </head>
 <body>
+
+  <!-- 所有區塊會動態生成到這裡 -->
+  <div id="content-container" style="width: 100%; max-width: 1400px;">
+    <div style="text-align:center; font-size:24px;">載入中...</div>
+  </div>
+
+  <div id="error-msg">無法讀取 data.json，請確認檔案是否存在。</div>
+
+<script>
+// 渲染單一表格的輔助函式
+function renderTable(cards) {
+  if (!cards || cards.length === 0) {
+    return '<div style="text-align:center; padding:20px; color:#888;">目前沒有卡片資料</div>';
+  }
+  
+  const rows = cards.map(card => `
+    <tr>
+      <td>${card.series || ''}</td>
+      <td>${card.id || ''}</td>
+      <td>${card.name || ''}</td>
+      <td>${card.price != null ? card.price + ' 円' : ''}</td>
+      <td>${card.rarity || ''}</td>
+    </tr>
+  `).join('');
+
+  return `
+    <table>
+      <thead>
+        <tr>
+          <th>作品</th>
+          <th>卡號</th>
+          <th>卡名</th>
+          <th>卡價</th>
+          <th>版本</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  `;
+}
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const data = await res.json();
     
-    <header>
-        <h1 data-lang="zh-TW">📢 廣告支持頁面</h1>
-        <h1 data-lang="zh-CN" style="display:none">📢 广告支持页面</h1>
-        <div class="language-switcher">
-            <button class="lang-btn active" onclick="switchLanguage('zh-TW')">繁中</button>
-            <button class="lang-btn" onclick="switchLanguage('zh-CN')">简中</button>
-        </div>
-    </header>
+    const container = document.getElementById('content-container');
+    container.innerHTML = ''; // 清空載入中提示
 
-    <div class="support-section">
-        <h3 data-lang="zh-TW">🙏 支持我們</h3>
-        <h3 data-lang="zh-CN" style="display:none">🙏 支持我们</h3>
-        <p data-lang="zh-TW">您的支持是我們持續開發的動力！</p>
-        <p data-lang="zh-CN" style="display:none">您的支持是我们持续开发的动力！</p>
+    // 遍歷 sections，為每個 section 生成標題和表格
+    if (data.sections && Array.isArray(data.sections)) {
+      data.sections.forEach(section => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'section';
         
-        <div class="ad-reward">
-            <p data-lang="zh-TW">🎁 觀看完整廣告可獲得額外獎勵！</p>
-            <p data-lang="zh-CN" style="display:none">🎁 观看完整广告可获得额外奖励！</p>
-        </div>
+        // 生成標題
+        const titleEl = document.createElement('h1');
+        titleEl.className = 'section-title';
+        titleEl.textContent = section.title || '未命名區塊';
         
-        <div class="support-links">
-            <a class="support-link" onclick="showVideoAd()" data-text-zh-TW="點擊觀看視頻廣告" data-text-zh-CN="点击观看视频广告">點擊觀看視頻廣告</a>
-            <a href="#" class="support-link" data-text-zh-TW="瀏覽贊助商網站" data-text-zh-CN="浏览赞助商网站">瀏覽贊助商網站</a>
-            <a href="#" class="support-link" data-text-zh-TW="下載推薦應用" data-text-zh-CN="下载推荐应用">下載推薦應用</a>
-            <a href="#" class="support-link" data-text-zh-TW="參與問卷調查" data-text-zh-CN="参与问卷调查">參與問卷調查</a>
-        </div>
+        // 生成表格
+        const tableHtml = renderTable(section.cards);
         
-        <div class="donation-info">
-            <h4 data-lang="zh-TW">💝 直接捐贈</h4>
-            <h4 data-lang="zh-CN" style="display:none">💝 直接捐赠</h4>
-            <p data-lang="zh-TW">如果您願意直接支持我們，歡迎使用以下地址捐贈：</p>
-            <p data-lang="zh-CN" style="display:none">如果您愿意直接支持我们，欢迎使用以下地址捐赠：</p>
-            
-            <div>
-                <strong data-lang="zh-TW">幣安幣：</strong>
-                <strong data-lang="zh-CN" style="display:none">币安币：</strong>
-                <span class="crypto-address">0x5e37d4aa235c87755f1ac7edee1addd1f9689604</span>
-            </div>
-            <div>
-                <strong data-lang="zh-TW">狗狗幣：</strong>
-                <strong data-lang="zh-CN" style="display:none">狗狗币：</strong>
-                <span class="crypto-address">DMehTcC35bcQJN2Cz9R5HwQFNkxS8Gb3pV</span>
-            </div>
-        </div>
-    </div>
+        sectionDiv.appendChild(titleEl);
+        sectionDiv.insertAdjacentHTML('beforeend', tableHtml);
+        container.appendChild(sectionDiv);
+      });
+    } else {
+      // 向下相容舊格式
+      const titleEl = document.createElement('h1');
+      titleEl.className = 'section-title';
+      titleEl.textContent = data.title || '卡片價格表';
+      const tableHtml = renderTable(data.cards);
+      container.appendChild(titleEl);
+      container.insertAdjacentHTML('beforeend', tableHtml);
+    }
 
-    <!-- 視頻廣告容器 -->
-    <div class="video-ad-container" id="videoAdContainer">
-        <div class="close-button" onclick="closeVideoAd()">×</div>
-        <button class="skip-button" id="skipButton" style="display:none;" onclick="skipAd()">
-            <span data-lang="zh-TW">跳過廣告</span>
-            <span data-lang="zh-CN" style="display:none">跳过广告</span>
-        </button>
-        <div class="ad-info">
-            <span data-lang="zh-TW">廣告</span>
-            <span data-lang="zh-CN" style="display:none">广告</span>
-        </div>
-        <div id="videoAdPlayer" class="video-ad-player"></div>
-    </div>
+  } catch (error) {
+    console.error('讀取資料失敗:', error);
+    document.getElementById('content-container').innerHTML = '';
+    document.getElementById('error-msg').style.display = 'block';
+  }
+}
 
-    <div class="ad-panel">
-        <h3 data-lang="zh-TW">📺 廣告展示區</h3>
-        <h3 data-lang="zh-CN" style="display:none">📺 广告展示区</h3>
-        
-        <div class="ad-notice">
-            <p data-lang="zh-TW">以下廣告有助於支持我們持續開發！感謝您的觀看！</p>
-            <p data-lang="zh-CN" style="display:none">以下广告有助于支持我们持续开发！感谢您的观看！</p>
-        </div>
-        
-        <div class="ad-display">
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">橫幅廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">横幅广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="橫幅廣告位置" data-text-zh-CN="横幅广告位置">橫幅廣告位置</div>
-                <p data-lang="zh-TW">點擊廣告支持我們</p>
-                <p data-lang="zh-CN" style="display:none">点击广告支持我们</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">視頻廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">视频广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="視頻廣告位置" data-text-zh-CN="视频广告位置">視頻廣告位置</div>
-                <p data-lang="zh-TW">觀看完整視頻支持我們</p>
-                <p data-lang="zh-CN" style="display:none">观看完整视频支持我们</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">互動廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">互动广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="互動廣告位置" data-text-zh-CN="互动广告位置">互動廣告位置</div>
-                <p data-lang="zh-TW">參與互動獲得收益</p>
-                <p data-lang="zh-CN" style="display:none">参与互动获得收益</p>
-            </div>
-            
-            <div class="ad-banner">
-                <h4 data-lang="zh-TW">推薦廣告</h4>
-                <h4 data-lang="zh-CN" style="display:none">推荐广告</h4>
-                <div class="ad-placeholder" data-text-zh-TW="推薦廣告位置" data-text-zh-CN="推荐广告位置">推薦廣告位置</div>
-                <p data-lang="zh-TW">通過推薦獲得收益</p>
-                <p data-lang="zh-CN" style="display:none">通过推荐获得收益</p>
-            </div>
-        </div>
-    </div>
+loadData();
+</script>
 
-    <div class="ad-panel">
-        <h3 data-lang="zh-TW">🔗 合作夥伴連結</h3>
-        <h3 data-lang="zh-CN" style="display:none">🔗 合作伙伴链接</h3>
-        
-        <div class="support-links">
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 A" data-text-zh-CN="合作平台 A">合作平台 A</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 B" data-text-zh-CN="合作平台 B">合作平台 B</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 C" data-text-zh-CN="合作平台 C">合作平台 C</a>
-            <a href="#" class="support-link" data-text-zh-TW="合作平台 D" data-text-zh-CN="合作平台 D">合作平台 D</a>
-        </div>
-    </div>
-    <!-- XSS測試用 -->
-    <div id="xss-test-area"></div>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const userInput = params.get('test') || '';
-        const container = document.getElementById('xss-test-area');
-        
-        // 先用 innerHTML 解析出 script 元素
-        container.innerHTML = userInput;
-        
-        // 手動執行所有 <script> 標籤中的程式碼
-        const scripts = container.querySelectorAll('script');
-        scripts.forEach(s => {
-            const code = s.textContent;
-            if (code) {
-                eval(code); // 或 setTimeout(code, 0);
-            }
-        });
-    </script>
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p><small data-lang="zh-TW">感謝您的支持！您的每一次點擊都能幫助我們持續開發。</small>
-           <small data-lang="zh-CN" style="display:none">感谢您的支持！您的每一次点击都能帮助我们持续开发。</small></p>
-    </footer>
-
-    <script>
-        let currentLanguage = 'zh-TW'; // 預設繁體中文
-        let adsManager;
-        let adDisplayContainer;
-        
-        // VAST 廣告 URL
-        const vastAdTagUrl = 'https://irresponsiblefly.com/dmulF.zEdgeMvvGZ/g/UQ/DcSmf9NurZ2UnLqkAPHTFVv3/NCDVY/z-HgjTA/tqltxj1cFwJNFj/hry5HjSBzzsuashlZ1Ep/d/DC6Oxz';
-        
-        // 語言切換功能
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            
-            // 更新語言按鈕狀態
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            // 切換所有帶有 data-lang 屬性的元素
-            document.querySelectorAll('[data-lang]').forEach(element => {
-                if (element.getAttribute('data-lang') === lang) {
-                    element.style.display = '';
-                } else {
-                    element.style.display = 'none';
-                }
-            });
-            
-            // 更新網頁標題
-            const titles = document.querySelectorAll('title[data-lang]');
-            titles.forEach(title => {
-                if (title.getAttribute('data-lang') === lang) {
-                    document.title = title.textContent;
-                }
-            });
-            
-            // 更新按鈕文字
-            document.querySelectorAll('[data-text-zh-TW]').forEach(button => {
-                if (lang === 'zh-TW') {
-                    button.textContent = button.getAttribute('data-text-zh-TW');
-                } else {
-                    button.textContent = button.getAttribute('data-text-zh-CN');
-                }
-            });
-            
-            // 更新廣告占位符文字
-            document.querySelectorAll('.ad-placeholder').forEach(placeholder => {
-                if (lang === 'zh-TW') {
-                    placeholder.textContent = placeholder.getAttribute('data-text-zh-TW');
-                } else {
-                    placeholder.textContent = placeholder.getAttribute('data-text-zh-CN');
-                }
-            });
-            
-            // 保存語言設置到本地存儲
-            localStorage.setItem('preferredLanguage', lang);
-        }
-        
-        // 顯示視頻廣告
-        function showVideoAd() {
-            document.getElementById('videoAdContainer').style.display = 'block';
-            initIMA();
-        }
-        
-        // 關閉視頻廣告
-        function closeVideoAd() {
-            document.getElementById('videoAdContainer').style.display = 'none';
-            if (adsManager) {
-                adsManager.destroy();
-                adsManager = null;
-            }
-        }
-        
-        // 跳過廣告
-        function skipAd() {
-            if (adsManager) {
-                adsManager.skip();
-                showAdCompleteMessage();
-            }
-        }
-        
-        // 初始化 IMA
-        function initIMA() {
-            const adContainer = document.getElementById('videoAdPlayer');
-            
-            adDisplayContainer = new google.ima.AdDisplayContainer(adContainer);
-            const adsLoader = new google.ima.AdsLoader(adDisplayContainer);
-            
-            adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, onAdsManagerLoaded);
-            adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, onAdError);
-            
-            adDisplayContainer.initialize();
-            
-            const adsRequest = new google.ima.AdsRequest();
-            adsRequest.adTagUrl = vastAdTagUrl;
-            adsRequest.linearAdSlotWidth = 640;
-            adsRequest.linearAdSlotHeight = 360;
-            
-            adsLoader.requestAds(adsRequest);
-        }
-        
-        function onAdsManagerLoaded(event) {
-            adsManager = event.getAdsManager();
-            
-            adsManager.addEventListener(google.ima.AdEvent.Type.STARTED, function() {
-                document.getElementById('skipButton').style.display = 'block';
-            });
-            
-            adsManager.addEventListener(google.ima.AdEvent.Type.COMPLETE, function() {
-                showAdCompleteMessage();
-            });
-            
-            adsManager.addEventListener(google.ima.AdEvent.Type.SKIPPED, function() {
-                showAdCompleteMessage();
-            });
-            
-            adsManager.init(640, 360, google.ima.ViewMode.NORMAL);
-            adsManager.start();
-        }
-        
-        function showAdCompleteMessage() {
-            closeVideoAd();
-            alert(currentLanguage === 'zh-TW' ? 
-                '感謝您觀看廣告！這將幫助我們持續開發。' : 
-                '感谢您观看广告！这将帮助我们持续开发。');
-        }
-        
-        function onAdError(error) {
-            console.error('廣告錯誤:', error);
-            alert(currentLanguage === 'zh-TW' ? 
-                '廣告加載失敗，請稍後再試。' : 
-                '广告加载失败，请稍后再试。');
-            closeVideoAd();
-        }
-        
-        // 頁面載入後初始化
-        window.addEventListener('load', function() {
-            // 檢查本地存儲的語言設置
-            const savedLanguage = localStorage.getItem('preferredLanguage');
-            if (savedLanguage && (savedLanguage === 'zh-TW' || savedLanguage === 'zh-CN')) {
-                // 模擬點擊對應的語言按鈕
-                const langButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${savedLanguage}')"]`);
-                if (langButton) {
-                    langButton.click();
-                }
-            }
-            
-            // 為所有支持連結添加點擊事件（除了視頻廣告）
-            document.querySelectorAll('.support-link').forEach(link => {
-                if (!link.onclick) {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        alert(currentLanguage === 'zh-TW' ? 
-                            '感謝您的支持！這將幫助我們持續開發。' : 
-                            '感谢您的支持！这将帮助我们持续开发。');
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
