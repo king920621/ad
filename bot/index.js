@@ -1,5 +1,4 @@
 // bot/index.js
-import 'dotenv/config';
 import { Client, GatewayIntentBits, REST, Routes } from 'discord.js';
 import { commands } from './commands.js';
 import { handleCommand, handleAutocomplete } from './handlers.js';
