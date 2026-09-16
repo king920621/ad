@@ -1,13 +1,16 @@
 // bot/dataManager.js
 import { Octokit } from 'octokit';
+import fs from 'fs/promises';   
+import path from 'path';        
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
 const OWNER = process.env.GITHUB_OWNER;
 const REPO = process.env.GITHUB_REPO;
 const FILE_PATH = process.env.GITHUB_FILE_PATH || 'data.json';
 const BRANCH = process.env.GITHUB_BRANCH || 'main';
 
+// 本地檔案路徑（Docker 容器內的工作目錄是 /app）
+const LOCAL_DATA_PATH = path.join('/app', 'public', 'data.json');
 // ==========================================
 // 寫入隊列
 // ==========================================
@@ -70,15 +73,22 @@ async function _writeData(data) {
     hour12: false,
   });
 
-  const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
+  const jsonString = JSON.stringify(data, null, 2);
 
+  // 1. 寫入本地檔案（讓 Nginx 立刻提供最新資料）
+  try {
+    await fs.writeFile(LOCAL_DATA_PATH, jsonString, 'utf-8');
+    console.log('✅ 已更新本地 public/data.json');
+  } catch (e) {
+    console.error('⚠️ 寫入本地檔案失敗:', e.message);
+  }
+
+  // 2. 寫入 GitHub（永久保存）
+  const content = Buffer.from(jsonString).toString('base64');
   let sha;
   try {
     const { data: fileData } = await octokit.rest.repos.getContent({
-      owner: OWNER,
-      repo: REPO,
-      path: FILE_PATH,
-      ref: BRANCH,
+      owner: OWNER, repo: REPO, path: FILE_PATH, ref: BRANCH,
     });
     sha = fileData.sha;
   } catch (error) {
@@ -86,16 +96,14 @@ async function _writeData(data) {
   }
 
   const params = {
-    owner: OWNER,
-    repo: REPO,
-    path: FILE_PATH,
+    owner: OWNER, repo: REPO, path: FILE_PATH,
     message: `Update data: ${data.lastUpdated}`,
-    content: content,
-    branch: BRANCH,
+    content: content, branch: BRANCH,
   };
   if (sha) params.sha = sha;
 
   await octokit.rest.repos.createOrUpdateFileContents(params);
+  console.log('✅ 已更新 GitHub 上的 data.json');
 }
 
 export async function writeData(data) {
