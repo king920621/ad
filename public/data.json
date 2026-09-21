@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026/9/21 14:11:59",
+  "lastUpdated": "2026/9/21 14:22:44",
   "sections": [
     {
       "title": "9~10月份",
@@ -159,9 +159,9 @@
           "series": "東方Project",
           "id": "THP/S130-P27EX",
           "name": "行雲流水 霊夢(箔押し入り)",
-          "price": 99800,
+          "price": 69800,
           "rarity": "pr+",
-          "prevPrice": null
+          "prevPrice": 99800
         }
       ]
     }
