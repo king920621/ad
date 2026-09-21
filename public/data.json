@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16 15:00",
+  "lastUpdated": "2026/9/21 14:11:59",
   "sections": [
     {
       "title": "9~10月份",
@@ -8,85 +8,97 @@
           "series": "葬送のフリーレン",
           "id": "SFN/S136-P01",
           "name": "Happy New Year フリーレン",
-          "price": 680,
-          "rarity": "pr"
+          "price": 500,
+          "rarity": "pr",
+          "prevPrice": 680
         },
         {
           "series": "葬送のフリーレン",
           "id": "SFN/S136-P01S",
           "name": "Happy New Year フリーレン(箔押し入り)",
           "price": 3480,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "葬送のフリーレン",
           "id": "SFN/S136-P01EX",
           "name": "Happy New Year フリーレン(箔押し入り)",
           "price": 79800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         },
         {
           "series": "【推しの子】",
           "id": "OSK/S133-P01",
           "name": "Happy New Year ルビー＆アクア",
           "price": 500,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "【推しの子】",
           "id": "OSK/S133-P01S",
           "name": "Happy New Year ルビー＆アクア(箔押し入り)",
           "price": 980,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "【推しの子】",
           "id": "OSK/S133-P01EX",
           "name": "Happy New Year ルビー＆アクア(サイン入り)",
           "price": 49800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         },
         {
           "series": "ブラウンダスト2",
           "id": "BRD/W139-P01",
           "name": "剣道部 ユースティア",
           "price": 980,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "ブラウンダスト2",
           "id": "BRD/W139-P01S",
           "name": "剣道部 ユースティア(箔押し入り)",
           "price": 1980,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "ブラウンダスト2",
           "id": "BRD/W139-P01EX",
           "name": "剣道部 ユースティア(箔押し入り)",
           "price": 69800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         },
         {
           "series": "Re:ゼロから始める異世界生活",
           "id": "RZ/S132-P01",
           "name": "最悪の災厄に、何度でも立ち向かえ スバル＆エミリア",
           "price": 220,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "Re:ゼロから始める異世界生活",
           "id": "RZ/S132-P01S",
           "name": "最悪の災厄に、何度でも立ち向かえ スバル＆エミリア(箔押し入り)",
           "price": 680,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "Re:ゼロから始める異世界生活",
           "id": "RZ/S132-P01EX",
           "name": "最悪の災厄に、何度でも立ち向かえ スバル＆エミリア(箔押し入り)",
           "price": 14800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         }
       ]
     },
@@ -98,14 +110,16 @@
           "id": "OSK/S133-P02S",
           "name": "双子の撮影 アクア(箔押し入り)",
           "price": 3980,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "【推しの子】",
           "id": "OSK/S133-P02EX",
           "name": "双子の撮影 アクア(サイン入り)",
           "price": 79800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         }
       ]
     },
@@ -117,14 +131,16 @@
           "id": "RZ/S132-P02S",
           "name": "私の手を取って(箔押し入り)",
           "price": 1280,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "Re:ゼロから始める異世界生活",
           "id": "RZ/S132-P03EX",
           "name": "たまには息抜き エミリア(箔押し入り)",
           "price": 39800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         }
       ]
     },
@@ -136,14 +152,16 @@
           "id": "THP/S130-P27S",
           "name": "行雲流水 霊夢(箔押し入り)",
           "price": 7980,
-          "rarity": "pr"
+          "rarity": "pr",
+          "prevPrice": null
         },
         {
           "series": "東方Project",
           "id": "THP/S130-P27EX",
           "name": "行雲流水 霊夢(箔押し入り)",
           "price": 99800,
-          "rarity": "pr+"
+          "rarity": "pr+",
+          "prevPrice": null
         }
       ]
     }
