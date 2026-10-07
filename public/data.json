@@ -164,6 +164,27 @@
           "prevPrice": 69800
         }
       ]
+    },
+    {
+      "title": "CX：葬送のフリーレン",
+      "cards": [
+        {
+          "series": "葬送のフリーレン",
+          "id": "SFN/S136-P02S",
+          "name": "新たな旅路(箔押し入り)",
+          "price": 9980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "葬送のフリーレン",
+          "id": "SFN/S136-P02EX",
+          "name": "新たな旅路(箔押し入り)",
+          "price": 79800,
+          "rarity": "pr+",
+          "prevPrice": null
+        }
+      ]
     }
   ]
 }
