@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026/10/7 17:35:08",
+  "lastUpdated": "2026/10/22 03:17:22",
   "sections": [
     {
       "title": "9~10月",
@@ -180,9 +180,9 @@
           "series": "葬送のフリーレン",
           "id": "SFN/S136-P02EX",
           "name": "新たな旅路(箔押し入り)",
-          "price": 79800,
+          "price": 59800,
           "rarity": "pr+",
-          "prevPrice": null
+          "prevPrice": 79800
         }
       ]
     }
