@@ -2,6 +2,107 @@
   "lastUpdated": "2026/11/5 01:20:53",
   "sections": [
     {
+      "title": "11~12月",
+      "cards": [
+        {
+          "series": "勝利の女神：NIKKE",
+          "id": "NIK/S135-P01",
+          "name": "ラピ：レッドフード - チェリッシュドレッド",
+          "price": 980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "勝利の女神：NIKKE",
+          "id": "NIK/S135-P01S",
+          "name": "ラピ：レッドフード - チェリッシュドレッド(箔押し入り)",
+          "price": 7980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "勝利の女神：NIKKE",
+          "id": "NIK/S135-P01EX",
+          "name": "ラピ：レッドフード - チェリッシュドレッド(箔押し入り)",
+          "price": 79800,
+          "rarity": "pr+",
+          "prevPrice": 79800
+        },
+        {
+          "series": "anemoi",
+          "id": "ANM/W138-P06",
+          "name": "“風がつなぐ奇跡”朱比華",
+          "price": 500,
+          "rarity": "pr",
+          "prevPrice": 500
+        },
+        {
+          "series": "anemoi",
+          "id": "ANM/W138-P06S",
+          "name": "“風がつなぐ奇跡”朱比華(箔押し入り)",
+          "price": 1280,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "anemoi",
+          "id": "ANM/W138-P06EX",
+          "name": "“風がつなぐ奇跡”朱比華(箔押し入り)",
+          "price": 29800,
+          "rarity": "pr+",
+          "prevPrice": 29800
+        },
+        {
+          "series": "ステラソラ",
+          "id": "STS/W140-P01",
+          "name": "巡遊者 ホタル(箔押し入り)",
+          "price": 500,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "ステラソラ",
+          "id": "STS/W140-P01S",
+          "name": "巡遊者 ホタル(箔押し入り)",
+          "price": 1280,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "ステラソラ",
+          "id": "STS/W140-P01EX",
+          "name": "巡遊者 ホタル(箔押し入り)",
+          "price": 24800,
+          "rarity": "pr+",
+          "prevPrice": null
+        },
+        {
+          "series": "ガールズ＆パンツァー",
+          "id": "GUP/W141-P01",
+          "name": "天才少女 島田愛里寿",
+          "price": 220,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "ガールズ＆パンツァー",
+          "id": "GUP/W141-P01S",
+          "name": "天才少女 島田愛里寿(箔押し入り)",
+          "price": 420,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "ガールズ＆パンツァー",
+          "id": "-",
+          "name": "-",
+          "price": null,
+          "rarity": "pr+",
+          "prevPrice": null
+        }
+      ]
+    },
+    {
       "title": "9~10月",
       "cards": [
         {
@@ -103,6 +204,69 @@
       ]
     },
     {
+      "title": "CX challenge：Nikke",
+      "cards": [
+        {
+          "series": "勝利の女神：NIKKE",
+          "id": "NIK/S135-P02S",
+          "name": "バイパー - シャイン・オブ・ラブ(箔押し入り)",
+          "price": 4980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "勝利の女神：NIKKE",
+          "id": "NIK/S135-P02EX",
+          "name": "バイパー - シャイン・オブ・ラブ(箔押し入り)",
+          "price": 39800,
+          "rarity": "pr+",
+          "prevPrice": null
+        }
+      ]
+    },
+    {
+      "title": "CX challenge：anemoi",
+      "cards": [
+        {
+          "series": "anemoi",
+          "id": "ANM/W138-P07S",
+          "name": "“風の回廊へ”朱比華(箔押し入り)",
+          "price": 3980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "anemoi",
+          "id": "ANM/W138-P07EX",
+          "name": "バイパー - シャイン・オブ・ラブ(箔押し入り)",
+          "price": 59800,
+          "rarity": "pr+",
+          "prevPrice": null
+        }
+      ]
+    },
+    {
+      "title": "CX challenge：ステラソラ",
+      "cards": [
+        {
+          "series": "ステラソラ",
+          "id": "STS/W140-P02S",
+          "name": "雪に刻む足跡 フユカ(箔押し入り)",
+          "price": 6980,
+          "rarity": "pr",
+          "prevPrice": null
+        },
+        {
+          "series": "ステラソラ",
+          "id": "STS/W140-P04EX",
+          "name": "魔女のビッグニュース★ ミスティ(箔押し入り)",
+          "price": 39800,
+          "rarity": "pr+",
+          "prevPrice": null
+        }
+      ]
+    },
+    {
       "title": "CX challenge：推しの子",
       "cards": [
         {
@@ -141,27 +305,6 @@
           "price": 39800,
           "rarity": "pr+",
           "prevPrice": null
-        }
-      ]
-    },
-    {
-      "title": "CX challenge：東方Project",
-      "cards": [
-        {
-          "series": "東方Project",
-          "id": "THP/S130-P27S",
-          "name": "行雲流水 霊夢(箔押し入り)",
-          "price": 4980,
-          "rarity": "pr",
-          "prevPrice": 7980
-        },
-        {
-          "series": "東方Project",
-          "id": "THP/S130-P27EX",
-          "name": "行雲流水 霊夢(箔押し入り)",
-          "price": 39800,
-          "rarity": "pr+",
-          "prevPrice": 69800
         }
       ]
     },
